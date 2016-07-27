@@ -47,7 +47,7 @@ class AwesomeProject extends Component {
     return (
         <ListView
             dataSource={this.state.dataSource}
-            renderRow={renderMovie}
+            renderRow={renderMovie} // this is not a loop
             style={{
                 paddingTop: 20,
                 backgroundColor: '#F5FCFF'
