@@ -1,6 +1,36 @@
 
 
-## TaskList
+# The router
+
+```
+switch (route.name) {
+case 'taskform':
+    return (
+        <TaskForm
+            nav={nav}
+            onAdd={this.onAdd.bind(this)}
+            onCancel={this.onCancel.bind(this)}
+            route={route}
+        />
+    );
+default:
+    return (
+        <TaskList
+            nav={nav}
+            onAddStarted={this.onAddStarted.bind(this)}
+            onTodoDone={this.handleTodoDone.bind(this)}
+            route={route}
+            selectedState={this.state.selectedState}
+            todos={this.state.todos}
+        />
+    );
+}
+```        
+
+
+# TaskList
+
+- ListView
 
 ```
 <View >
